@@ -1,15 +1,19 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font: 14px 'Century Gothic', Futura, sans-serif;
   margin: 20px;
 }
 
-ol, ul {
+ol,
+ul {
   padding-left: 30px;
+  list-style: none;
+  overflow: scroll;
+  max-height: 80vh;
 }
 
 .board-row:after {
   clear: both;
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -49,3 +53,40 @@ ol, ul {
   margin-left: 20px;
 }
 
+#root {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+  height: 100%;
+}
+
+.app {
+  max-height: 100%;
+}
+
+li {
+  flex: 4;
+}
+
+form.taskEdit {
+  display: flex;
+  flex: 1;
+}
+
+div.task input {
+  flex: 4;
+}
+
+button.deleteTask,
+button.editTask {
+  flex: 1;
+}
+
+div.task {
+  display: flex;
+  border-bottom: 0.5px solid black;
+}
+
+div.task:last-child {
+  border-bottom: 0px;
+}
